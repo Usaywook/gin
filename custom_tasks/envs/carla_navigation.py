@@ -1117,14 +1117,13 @@ class CarlaNavigationEnv(gym.Env):
 
         # custom reward
         if config['dense_reward']:
-            abs_lspeed = max(abs(lspeed_lon), 0.2)
-            r_success = 10 * r_success
-            r_vlon = 1. * abs(lspeed_lon)
-            r_vlat = - 1. * abs(lspeed_lat)
-            r_lat = - 0.2 * abs(self.lat_dist)
-            r_lat_diff = 10. * (abs(self.prev_measurement['lat_dist']) - abs(self.lat_dist))
-            r_steer = - 0.5 * abs(steer) * abs_lspeed
-            r_yaw = - 0.5 * abs(self.delta_yaw) * abs_lspeed
+            r_success = 10 * r_success                                                                                                                                                                      
+            r_vlon = 1. * abs(lspeed_lon)                                                                                                                                                                   
+            r_vlat = - 1. * abs(lspeed_lat)                                                                                                                                                                 
+            r_lat = - 0.2 * abs(self.lat_dist)                                                                                                                                      
+            r_lat_diff = 10. * (abs(self.prev_measurement['lat_dist']) - abs(self.lat_dist))                                                                                                                
+            r_steer = - 0.5 * abs(steer) * abs(lspeed_lon)                                                                                                                                                  
+            r_yaw = - 0.5 * abs(self.delta_yaw) * abs(lspeed_lon)                                                                                                                                           
             reward = r_success + r_vlon + r_vlat + r_lat + r_lat_diff + r_steer + r_yaw - self.penalty * c_collision
 
         else:
