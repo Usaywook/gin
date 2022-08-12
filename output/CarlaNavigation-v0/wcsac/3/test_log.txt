@@ -1,0 +1,2 @@
+eval_mean_return,eval_std_return,eval_mean_step,eval_std_step,success_rate,collision_rate,eval_mean_success_step,eval_std_success_step,eval_mean_distance,eval_std_distance,eval_mean_cost,eval_std_cost
+811.16,573.82,184.81,115.26,0.36,0.53,309.22,62.01,103.80,73.75,10.41,14.42

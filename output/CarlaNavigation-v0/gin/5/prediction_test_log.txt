@@ -1,0 +1,2 @@
+ADE_mean,ADE_std,FDE_mean,FDE_std
+0.68,0.06,1.54,0.19
