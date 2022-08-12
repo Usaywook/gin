@@ -1,0 +1,129 @@
+client_time_out: 60
+# fixed_delta_seconds <= max_substep_delta_time * max_substeps
+fixed_delta_seconds: 0.25 # 0.1
+max_substep_delta_time: 0.016 # 0.01
+max_substeps: 16 # 10
+tm_port: 8000
+quality_level: 'high' # 'low'
+
+action_dim: 2
+traffic_rate: 1.0
+use_dist_ttc: False
+use_tracking: False
+max_waypoint: 100
+use_traffic_light: False
+use_light_change: True
+use_lane_change_link: True
+light_time: 1.0
+use_auto_lane_change: True
+ignore_lights_percentage: 100
+ignore_signs_percentage: 100
+percentage_speed_difference: -20 # 120% of current speed limit
+
+random_route: True
+start_location: [142.47, -2.85, 0.2]
+end_location: [-11.10, -138.51, 0.2]
+other_location:
+
+debug_way: True
+debug_target: False
+debug_global_path: False
+debug_semantic: False
+debug_tracking: False
+debug_ttc: False
+debug_lateral_error: False
+debug_action: False
+debug_reward: False
+debug_failure: True
+debug_roi: False
+
+use_roi: True
+topview: False
+use_spectator: True
+no_rendering_mode: False
+dense_reward: True
+
+pygame_render: False
+use_camera: False
+use_birdeye: False
+use_lidar: False
+use_dict_obs : True
+use_camera_obs: False
+use_birdeye_obs: False
+use_lidar_obs: False
+display_route: False # whether to render the desired route
+
+obs_size: 256
+display_size: 256
+obs_range: 32  # observation range (meter)
+pixor_size: 64  # size of the pixor labels
+lidar_height: 1.8
+d_behind: 12  # distance behind the ego vehicle (meter)
+lidar_bin: 0.125  # bin size of lidar sensor (meter)
+max_past_step: 1  # the number of past steps to draw
+
+sampling_resolution: 2.0
+done_epsilon: 3.5
+tracking_threshold: 50.0
+tracking_number: 4
+lane_invasion_threshold: 1.75 #3.5 #7.0
+dynamic_lookahead: False
+max_lookahead: 15
+lookahead: 5.0
+
+spawn_bound: 20.0 #10.0
+
+# graph input
+use_graph: True
+major: 5.5
+minor: 2.1
+ttc_thres: 5.0
+
+# navigation agent
+use_trajectory: False
+debug_task: False
+debug_way_preview: False
+debug_trajectory : False
+debug_controller : False
+
+target_preview_index: 6
+max_depth: 6
+
+interpolation: True
+
+target_speed: 25.0
+lane_follow_way_dist: 4.5
+dt_lateral: 0.1
+dt_longitudinal: 0.1
+
+lateral_K_P: 0.58
+lateral_K_D: 0.02
+lateral_K_I: 0.5
+
+longitudinal_K_P: 0.15
+longitudinal_K_D: 0.05
+longitudinal_K_I: 0.07
+
+hw_lateral_K_P: 0.75
+hw_lateral_K_D: 0.02
+hw_lateral_K_I: 0.4
+
+hw_longitudinal_K_P: 0.37
+hw_longitudinal_K_D: 0.024
+hw_longitudinal_K_I: 0.032
+
+vehicle_config: [3.0, 0.5, 1.0, 2.7, -5] # A, B, C, D, E
+#A : maximum braking accleration
+#B : reaction time in abnormal situation
+#C : max steering angle [rad]
+#D : length of wheel base
+#E : sensitivity level over vetical distance between vehicle and ideal path
+
+max_speed: 50
+speed_lim_dist: 3 #6
+safety_time: 5
+safety_distance: 12
+collision_distance: 2.5
+braking_distance: 6.0
+overtake_counter: 0
+tailgate_counter: 0
