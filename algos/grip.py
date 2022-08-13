@@ -156,8 +156,7 @@ class GRIP(Agent):
         self.rescale_xy[:,1] = args.max_y
         self.error_order = args.error_order
 
-    def _build_network(self, args):
-        self.state_dim = 3
+    def _build_network(self, args):        
         self.gse = GraphSocialEncoder(in_channels=self.state_dim,
                                       max_hop=args.max_hop,
                                       num_node=args.max_object,
