@@ -1,4 +1,4 @@
-# This is repository for submission to R-AL.
+# This is repository for accepted paper to R-AL.
 Title of paper is GIN: Graph-based Interaction-aware Constraint Policy Optimization for Autonomous Driving
 
 ## Prerequisite
