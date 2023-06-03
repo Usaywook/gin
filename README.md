@@ -1,4 +1,4 @@
-# This is repository for accepted paper in RA-L 2023 and is presented in ICRA 2023.
+# This is repository for accepted paper in RA-L 2023 and ICRA 2023.
 Title of paper is [GIN: Graph-based Interaction-aware Constraint Policy Optimization for Autonomous Driving](https://ieeexplore.ieee.org/abstract/document/9976203)
 
 
